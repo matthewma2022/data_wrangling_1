@@ -13,5 +13,35 @@ library(tidyverse)
 ```{r}
 litters_df = read.csv("data/FAS_litters.csv")
 litters_df = janitor::clean_names(litters_df)
+
+##to clean the name of the data frame##
 ```
+
+```{r}
+litters_df
+
+head(litters_df)
+
+##to check the head and tails of a data table##
+```
+
+```{r, eval=FALSE}
+
+view(litters_df)
+
+##using eval=false to prevent troubles when knitting##
+```
+
+```{r}
+skimr::skim(litters_df)
+
+##quick summary of the entire data set##
+```
+
+'read_csv' options..
+```{r}
+read_csv("data/FAS_litters.csv", na = c("", "NA", 88), skip = 2)
+```
+
+## Other file formats
 
