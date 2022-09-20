@@ -4,3 +4,14 @@ output: github_document
 ---
 
 ## Data Import: CSVs
+
+
+```{r, echo=FALSE}
+library(tidyverse)
+```
+
+```{r}
+litters_df = read.csv("data/FAS_litters.csv")
+litters_df = janitor::clean_names(litters_df)
+```
+
